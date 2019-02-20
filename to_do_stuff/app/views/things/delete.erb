@@ -1,0 +1,9 @@
+<p>Are you sure you want to delete <%= @thing.description %>?</p>
+
+<form method="post" action="/things/<%=@thing.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+<form>
+
+<p><a href="/account">Back to Things</a></p>
+<p><a href="/logout">Log Out</a></p>

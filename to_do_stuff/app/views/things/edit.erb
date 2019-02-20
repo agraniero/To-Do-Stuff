@@ -1,0 +1,8 @@
+<p>go ahead and update that thing...</p>
+<form action="/things/<%= @thing.id %>/edit" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <input type="text" name="description">
+  <input type="submit" value="submit">
+</form>
+<p><a href="/account">Back to Things</a></p>
+<p><a href="/logout">Log Out</a></p>

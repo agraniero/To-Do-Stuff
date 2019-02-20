@@ -1,0 +1,13 @@
+<h1>dope!</h1>
+<p>welcome to your epic list of things to do, <%= current_user.username%>!!
+<p>create things, read things, update things, and delete things to your heart's content!</p>
+<ul>
+    <% @things.each do |thing| %>  
+    <% #binding.pry %>     
+           <li> <%= thing.description %> </li>
+           <a href="/things/<%=thing.id%>/edit"><i class="fa fa-pencil"></i>edit</a>
+<a href="/things/<%=thing.id%>/delete"><i class="fa fa-times"></i>delete</a>
+    <% end %>
+</ul>
+<p><a href="/things/new">add a thing!</a></p>
+<p><a href="/logout">Log Out</a></p>
